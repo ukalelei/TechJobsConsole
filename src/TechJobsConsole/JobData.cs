@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
 using System.Text;
@@ -68,16 +69,53 @@ namespace TechJobsConsole
 
             foreach (Dictionary<string, string> row in AllJobs)
             {
-                
 
-                string aValue = row["name"];
+                string[] columnArr = { "employer", "location", "position type", "core competency"};
 
-                if (aValue.Contains(value))
+                /*string value0 = row[columnArr[0]];
+                string value1 = row[columnArr[1]];
+                string value2 = row[columnArr[2]];
+                string value3 = row[columnArr[3]];
+                string value4 = row[columnArr[4]];
+
+
+                if (value0.Contains(value))
                 {
                     jobs.Add(row);
+
+                } else if (value1.Contains(value))
+                {
+                    jobs.Add(row);
+
+                } else if (value2.Contains(value))
+                {
+                    jobs.Add(row);
+
+                } else if (value3.Contains(value))
+                {
+                    jobs.Add(row);
+
+                } else if (value4.Contains(value))
+                {
+                    jobs.Add(row);
+                }*/
+             
+
+
+                foreach (string column in columnArr)
+                {
+
+                    string aValue = row[column];
+                    //string aValue = row["location"];
+                    //aValue.Contains(value);
+          
+                    if (aValue.Contains(value))
+                    {
+                        jobs.Add(row);
+                    }
+
                 }
             }
-
             return jobs;
         }
 
