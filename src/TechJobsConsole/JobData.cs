@@ -70,7 +70,7 @@ namespace TechJobsConsole
             foreach (Dictionary<string, string> row in AllJobs)
             {
 
-                string[] columnArr = { "employer", "location", "position type", "core competency"};
+                string[] columnArr = { "name", "employer", "location", "position type", "core competency"};
 
                 /*string value0 = row[columnArr[0]];
                 string value1 = row[columnArr[1]];
