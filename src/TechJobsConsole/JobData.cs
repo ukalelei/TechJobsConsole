@@ -50,8 +50,9 @@ namespace TechJobsConsole
             {
 
                 string aValue = row[column];
+                string aValueLowerCased = aValue.ToLower();
 
-                if (aValue.Contains(value))
+                if (aValueLowerCased.Contains(value))
                 {
                     jobs.Add(row);
                 }
@@ -77,7 +78,6 @@ namespace TechJobsConsole
                 string value2 = row[columnArr[2]];
                 string value3 = row[columnArr[3]];
                 string value4 = row[columnArr[4]];
-
 
                 if (value0.Contains(value))
                 {
@@ -106,10 +106,9 @@ namespace TechJobsConsole
                 {
 
                     string aValue = row[column];
-                    //string aValue = row["location"];
-                    //aValue.Contains(value);
+                    string aValueLowerCased = aValue.ToLower();
           
-                    if (aValue.Contains(value))
+                    if (aValueLowerCased.Contains(value))
                     {
                         jobs.Add(row);
                     }
